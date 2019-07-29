@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% block title %}
+App | Home
+{% endblock title %}
+
+{% block content %}
+<!-- <h1>Home Page</h1>
+<h1>Current time in server: {{currentTime}}</h1>
+<h1>length: {{"Hello world"|length}}</h1>
+<h1>Upper: {{"Hello world"|upper}}</h1>
+<h1>Lower: {{"Hello world"|lower}}</h1>
+{% for char in "Hello World" %}
+{{char}}
+{% endfor %}
+<form action="add" method="POST">
+    {% csrf_token %}
+    <input type="number" name="num1">
+    <input type="number" name="num2">
+    <input type="submit">
+</form> -->
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">NAME</th>
+            <th scope="col">COMPLETED</th>
+        </tr>
+    </thead>
+    <tbody>
+            {% for t in a %}
+        <tr>
+            <td>{{t.name}}</td>
+            <td>{{t.completed}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+
+</table>
+
+<table class="table table-hover table-dark">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+
+
+{% endblock %}
